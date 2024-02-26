@@ -2,7 +2,12 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 
-const roboto = Roboto({ subsets: ["latin"], weight: ["100", "300", "400", "500", "700", "900"] });
+import HeaderBar from "@/components/HeaderBar";
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+});
 
 export const metadata: Metadata = {
   title: "Stack Burguer",
@@ -11,8 +16,8 @@ export const metadata: Metadata = {
     "Hamburguer barato",
     "hamburguer saboroso",
     "Melhor hamburgueria da regiao",
-    "stack burguer"
-  ]
+    "stack burguer",
+  ],
 };
 
 export default function RootLayout({
@@ -24,6 +29,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={roboto.className}>
         <div>
+          <HeaderBar />
           <main>{children}</main>
         </div>
       </body>

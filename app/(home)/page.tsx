@@ -1,8 +1,11 @@
+import Container from "@/components/Container";
 
 export default function Home() {
   return (
     <div>
-      <span>Stack Burguer</span>
+      <Container>
+        <span>Stack Burguer</span>
+      </Container>
     </div>
   );
 }

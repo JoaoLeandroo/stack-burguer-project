@@ -11,9 +11,11 @@ const HeaderBar = () => {
     <header className="bg-red-700/90">
       <Container>
         <div className="w-full flex justify-between items-center text-white py-3">
-          <h1 className="font-bold text-4xl leading-6 uppercase drop-shadow-2xl">
-            Stack <br /> <span className="text-green-500">Burguer</span>
-          </h1>
+          <Link href={"/"}>
+            <h1 className="font-bold text-4xl leading-6 uppercase drop-shadow-2xl">
+              Stack <br /> <span className="text-green-500">Burguer</span>
+            </h1>
+          </Link>
 
           <div className="flex gap-8 items-center">
             <Link href={"/"}>
@@ -26,7 +28,7 @@ const HeaderBar = () => {
               <SheetContent>
                 <div className="w-full flex flex-col gap-5 mt-5">
                   <Link
-                    href={"/"}
+                    href={"/pages/burguers"}
                     className="w-full h-9 bg-red-500 flex gap-3 items-center px-5 hover:bg-red-600 transition duration-300 rounded-md text-white font-bold"
                   >
                     <FaHamburger size={20} />
@@ -34,7 +36,7 @@ const HeaderBar = () => {
                   </Link>
 
                   <Link
-                    href={"/"}
+                    href={"/pages/drinks"}
                     className="w-full h-9 bg-red-500 flex gap-3 items-center px-5 hover:bg-red-600 transition duration-300 rounded-md text-white font-bold"
                   >
                     <BiSolidDrink size={20} />
@@ -42,7 +44,7 @@ const HeaderBar = () => {
                   </Link>
 
                   <Link
-                    href={"/"}
+                    href={"/pages/candys"}
                     className="w-full h-9 bg-red-500 flex gap-3 items-center px-5 hover:bg-red-600 transition duration-300 rounded-md text-white font-bold"
                   >
                     <GiPieSlice size={20} />

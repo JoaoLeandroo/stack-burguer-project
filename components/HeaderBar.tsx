@@ -8,16 +8,16 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const HeaderBar = () => {
   return (
-    <header className="bg-red-300">
+    <header className="bg-red-500/80">
       <Container>
-        <div className="w-full h-14 flex justify-between items-center">
-          <h1>
-            Stack <br /> <span>Burguer</span>
+        <div className="w-full flex justify-between items-center text-white py-3">
+          <h1 className="font-bold text-4xl leading-6 uppercase drop-shadow-2xl">
+            Stack <br /> <span className="text-green-700">Burguer</span>
           </h1>
 
           <Sheet>
             <SheetTrigger>
-              <FaList size={20} />
+              <FaList size={30} />
             </SheetTrigger>
             <SheetContent>
               <div className="w-full flex flex-col gap-5 mt-5">

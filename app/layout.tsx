@@ -3,6 +3,7 @@ import { Roboto } from "next/font/google";
 import "./globals.css";
 
 import HeaderBar from "@/components/HeaderBar";
+import FooterBar from "@/components/FooterBar";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -28,9 +29,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${roboto.className} bg-red-700`}>
-        <div>
+        <div className="min-h-screen flex flex-col">
           <HeaderBar />
-          <main>{children}</main>
+          <main className="flex-grow">{children}</main>
+          <FooterBar />
         </div>
       </body>
     </html>

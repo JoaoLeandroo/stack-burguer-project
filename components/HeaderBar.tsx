@@ -8,7 +8,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const HeaderBar = () => {
   return (
-    <header className="bg-red-700/90">
+    <header className="bg-red-700/90 sticky top-0 z-50">
       <Container>
         <div className="w-full flex justify-between items-center text-white py-3">
           <Link href={"/"}>

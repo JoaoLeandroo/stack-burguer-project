@@ -2,7 +2,7 @@ import Container from "./Container";
 
 const FooterBar = () => {
   return (
-    <footer className="bg-red-700/90">
+    <footer className="bg-red-700/90 mt-8">
       <Container>
         <div className="flex flex-col xl:flex-row gap-2 p-5 justify-around text-center">
           <section className="lg:max-w-[600px] max-w-[1920px] w-full text-zinc-400 font-semibold">

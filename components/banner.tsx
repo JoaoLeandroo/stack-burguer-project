@@ -1,11 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
 

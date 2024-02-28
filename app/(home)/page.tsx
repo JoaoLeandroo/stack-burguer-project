@@ -1,5 +1,5 @@
 import Container from "@/components/Container";
-import Banner from "@/components/banner";
+import Banner from "@/components/Banner";
 
 export default function Home() {
   return (

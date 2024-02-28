@@ -1,7 +1,8 @@
 import Container from "./Container";
 import { FaList, FaHamburger, FaShoppingCart } from "react-icons/fa";
-import { BiSolidDrink } from "react-icons/bi";
+import { BiSolidDrink, BiDish } from "react-icons/bi";
 import { GiPieSlice } from "react-icons/gi";
+import { MdContactSupport } from "react-icons/md";
 
 import Link from "next/link";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -49,6 +50,22 @@ const HeaderBar = () => {
                   >
                     <GiPieSlice size={20} />
                     Sobremesas
+                  </Link>
+
+                  <Link
+                    href={"/pages/others"}
+                    className="w-full h-9 bg-red-500 flex gap-3 items-center px-5 hover:bg-red-600 transition duration-300 rounded-md text-white font-bold"
+                  >
+                    <BiDish size={20} />
+                    Outros
+                  </Link>
+  
+                  <Link
+                    href={"/pages/support"}
+                    className="w-full h-9 bg-red-500 flex gap-3 items-center px-5 hover:bg-red-600 transition duration-300 rounded-md text-white font-bold"
+                  >
+                    <MdContactSupport size={20} />
+                    Suporte
                   </Link>
                 </div>
               </SheetContent>

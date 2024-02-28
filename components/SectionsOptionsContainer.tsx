@@ -7,6 +7,7 @@ interface SectionOptionProps {
   w: number;
   h: number;
   categorieName: string;
+  href: string;
 }
 
 const SectionsOptionsContainer: React.FC<SectionOptionProps> = ({
@@ -15,10 +16,11 @@ const SectionsOptionsContainer: React.FC<SectionOptionProps> = ({
   w,
   h,
   categorieName,
+  href
 }) => {
   return (
     <section className="w-[220px] h-[220px] border border-zinc-600 md:w-[500px] md-[520px] shadow-md bg-zinc-600 rounded-xl relative scale-90 hover:scale-100 opacity-90 hover:opacity-100 transition duration-300">
-      <Link href={"/"} className="w-full h-full">
+      <Link href={href} className="w-full h-full">
         <Image
           src={src}
           width={w}

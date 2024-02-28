@@ -10,18 +10,20 @@ export default function Home() {
           <Banner />
           <div className="flex p-5 mt-5 justify-center gap-5 flex-wrap relative">
             <SectionsOptionsContainer
-              src="/coca-cola.jpg"
-              alt="Capa banner bebidas"
-              w={450}
-              h={450}
-              categorieName="Bebidas"
-            />
-            <SectionsOptionsContainer
               src="/simple-burguer.jpg"
               alt="Capa Banner Hamburguers"
               w={450}
               h={450}
               categorieName="Hamburguers"
+              href="/pages/burguers"
+            />
+            <SectionsOptionsContainer
+              src="/coca-cola.jpg"
+              alt="Capa banner bebidas"
+              w={450}
+              h={450}
+              categorieName="Bebidas"
+              href="/pages/drinks"
             />
             <SectionsOptionsContainer
               src="/Waffer.jpg"
@@ -29,6 +31,7 @@ export default function Home() {
               w={450}
               h={450}
               categorieName="Sobremesas"
+              href="/pages/candys"
             />
             <SectionsOptionsContainer
               src="/salada.jpg"
@@ -36,6 +39,7 @@ export default function Home() {
               w={450}
               h={450}
               categorieName="Outros"
+              href="/pages/others"
             />
           </div>
         </div>

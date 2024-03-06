@@ -1,6 +1,6 @@
 import Container from "@/components/Container";
 import { stackProducts } from "@/app/utils/stackProducts";
-import BurguerCard from "../_components/CardsProducts";
+import CardProducts from "../_components/CardsProducts";
 
 const Burguers = () => {
   const stack = stackProducts[0].burguers;
@@ -11,7 +11,7 @@ const Burguers = () => {
           {stack?.map((product: any) => {
             return (
               <div key={product.name}>
-                <BurguerCard
+                <CardProducts
                   src={product.urlImg}
                   alt={product.name}
                   title={product.name}

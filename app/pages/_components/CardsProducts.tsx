@@ -7,7 +7,7 @@ interface BurguerCardProps {
   price: number | string;
 }
 
-const BurguerCard: React.FC<BurguerCardProps> = ({
+const CardProducts: React.FC<BurguerCardProps> = ({
   src,
   alt,
   title,
@@ -48,4 +48,4 @@ const BurguerCard: React.FC<BurguerCardProps> = ({
   );
 };
 
-export default BurguerCard;
+export default CardProducts;

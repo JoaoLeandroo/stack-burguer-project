@@ -1,6 +1,6 @@
 import Container from "@/components/Container";
 import { stackProducts } from "@/app/utils/stackProducts";
-import BurguerCard from "./_components/BurguerCard";
+import BurguerCard from "../_components/CardsProducts";
 
 const Burguers = () => {
   const stack = stackProducts[0].burguers;

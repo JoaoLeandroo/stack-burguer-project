@@ -12,7 +12,9 @@ const FooterBar = () => {
               apenas uma hamburgueria; é uma experiência gastronômica. Nossos
               hambúrgueres são cuidadosamente preparados com os melhores
               ingredientes, desde carne suculenta até vegetais frescos e queijos
-              artesanais.
+              artesanais. <br />
+              &copy;{new Date().getFullYear()} - StackBurguer Todos os direitos
+              reservados.
             </p>
           </section>
           <section className="flex flex-col gap-y-2 font-medium text-lg text-left xl:text-center mt-5">

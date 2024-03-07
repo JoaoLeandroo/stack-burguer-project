@@ -5,9 +5,10 @@ import { GiPieSlice } from "react-icons/gi";
 import { MdContactSupport } from "react-icons/md";
 
 import Link from "next/link";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 
 const HeaderBar = () => {
+
   return (
     <header className="bg-red-700/90 sticky top-0 z-50">
       <Container>
@@ -22,51 +23,66 @@ const HeaderBar = () => {
             <Link href={"/"}>
               <FaShoppingCart size={25} />
             </Link>
+
             <Sheet>
               <SheetTrigger>
                 <FaList size={30} />
               </SheetTrigger>
               <SheetContent>
                 <div className="w-full flex flex-col gap-5 mt-5">
-                  <Link
-                    href={"/pages/burguers"}
-                    className="w-full h-9 bg-red-500 flex gap-3 items-center px-5 hover:bg-red-600 transition duration-300 rounded-md text-white font-bold"
-                  >
-                    <FaHamburger size={20} />
-                    Hamburguers
-                  </Link>
+                    <Link
+                      href={"/pages/burguers"}
+                      className="w-full h-9 bg-red-500  hover:bg-red-600 transition duration-300 rounded-md text-white font-bold"
+                      >
+                      <SheetClose className="w-full h-full flex gap-3 items-center px-5">
 
-                  <Link
-                    href={"/pages/drinks"}
-                    className="w-full h-9 bg-red-500 flex gap-3 items-center px-5 hover:bg-red-600 transition duration-300 rounded-md text-white font-bold"
-                  >
-                    <BiSolidDrink size={20} />
-                    Bebidas
-                  </Link>
+                      <FaHamburger size={20} />
+                      Hamburguers
+                    </SheetClose>
+                      
+                    </Link>
 
+                    <Link
+                      href={"/pages/drinks"}
+                      className="w-full h-9 bg-red-500 hover:bg-red-600 transition duration-300 rounded-md text-white font-bold"
+                      >
+                        <SheetClose className="w-full h-full flex gap-3 items-center px-5">
+
+                      <BiSolidDrink size={20} />
+                      Bebidas
+                      </SheetClose>
+                    </Link>
+                  
                   <Link
                     href={"/pages/candys"}
-                    className="w-full h-9 bg-red-500 flex gap-3 items-center px-5 hover:bg-red-600 transition duration-300 rounded-md text-white font-bold"
-                  >
+                    className="w-full h-9 bg-red-500 hover:bg-red-600 transition duration-300 rounded-md text-white font-bold"
+                    >
+                      <SheetClose className="w-full h-full flex gap-3 items-center px-5">
                     <GiPieSlice size={20} />
                     Sobremesas
+                    </SheetClose>
                   </Link>
-
+                    
                   <Link
                     href={"/pages/others"}
-                    className="w-full h-9 bg-red-500 flex gap-3 items-center px-5 hover:bg-red-600 transition duration-300 rounded-md text-white font-bold"
-                  >
+                    className="w-full h-9 bg-red-500 hover:bg-red-600 transition duration-300 rounded-md text-white font-bold"
+                    >
+                      <SheetClose className="w-full h-full flex gap-3 items-center px-5">
                     <BiDish size={20} />
                     Outros
+                    </SheetClose>
                   </Link>
-  
+                    
                   <Link
                     href={"/pages/support"}
-                    className="w-full h-9 bg-red-500 flex gap-3 items-center px-5 hover:bg-red-600 transition duration-300 rounded-md text-white font-bold"
-                  >
+                    className="w-full h-9 bg-red-500 hover:bg-red-600 transition duration-300 rounded-md text-white font-bold"
+                    >
+                      <SheetClose className="w-full h-full flex gap-3 items-center px-5">
                     <MdContactSupport size={20} />
                     Suporte
+                    </SheetClose>
                   </Link>
+                    
                 </div>
               </SheetContent>
             </Sheet>

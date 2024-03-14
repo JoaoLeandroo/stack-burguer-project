@@ -3,7 +3,7 @@ import Link from "next/link";
 const Others = () => {
   return (
     <Container>
-      <div className="h-[500px] flex items-center flex-col justify-center bg-[#000000a1] mt-2 rounded-xl">
+      <div className="h-[500px] text-center flex items-center flex-col justify-center bg-[#000000a1] mt-2 rounded-xl">
         <span className="text-2xl font-bold">
           Catalogo indisponível no momento.
         </span>

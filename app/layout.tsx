@@ -5,8 +5,8 @@ import "./globals.css";
 import HeaderBar from "@/components/HeaderBar";
 import FooterBar from "@/components/FooterBar";
 import AuthProvider from "@/contexts/auth";
-import { ToastContainer } from "react-toastify"
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -30,17 +30,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <html lang="pt-BR">
-        <body className={`${roboto.className} bg-red-700`}>
-          <AuthProvider>
-            <ToastContainer autoClose={3000}/>
-            <div className="min-h-screen flex flex-col">
-              <HeaderBar />
-                  <main className="flex-grow">{children}</main>
-              <FooterBar />
-            </div>
-          </AuthProvider>
-        </body>
-      </html>
+    <html lang="pt-BR">
+      <body className={`${roboto.className} bg-red-700`}>
+        <AuthProvider>
+          <ToastContainer autoClose={3000} />
+          <div className="min-h-screen flex flex-col">
+            <HeaderBar />
+            <main className="flex-grow">{children}</main>
+            <FooterBar />
+          </div>
+        </AuthProvider>
+      </body>
+    </html>
   );
 }

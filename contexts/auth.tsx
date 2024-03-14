@@ -4,7 +4,7 @@ import { createContext, useState } from "react";
 export const AuthContext = createContext<any>({});
 
 const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(0);
 
   return (
     <AuthContext.Provider value={{ count, setCount }}>

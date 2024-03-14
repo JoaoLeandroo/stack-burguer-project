@@ -1,3 +1,4 @@
+import ButtonCard from "./ButtonCard";
 import { FaPlusCircle } from "react-icons/fa";
 
 interface BurguerCardProps {
@@ -37,11 +38,13 @@ const CardProducts: React.FC<BurguerCardProps> = ({
           </p>
 
           <div className="w-full">
-            <button className="md:h-11 h-8 bg-green-500 w-full hover:bg-green-600 p-1 md:p-3 flex items-center justify-center gap-2 rounded-full md:rounded-[5px] font-semibold">
-              <FaPlusCircle size={20} />
-              <span className="hidden md:block">Adicionar ao Carrinho</span>
-              <span className="block md:hidden">Add</span>
-            </button>
+            <ButtonCard>
+              <div className="md:h-11 h-8 bg-green-500 w-full hover:bg-green-600 p-1 md:p-3 flex items-center justify-center gap-2 rounded-full md:rounded-[5px] font-semibold">
+                <FaPlusCircle size={20} />
+                <span className="hidden md:block">Adicionar ao Carrinho</span>
+                <span className="block md:hidden">Add</span>
+              </div>
+            </ButtonCard>
           </div>
         </div>
       </div>

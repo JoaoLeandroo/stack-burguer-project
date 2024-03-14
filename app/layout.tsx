@@ -5,6 +5,8 @@ import "./globals.css";
 import HeaderBar from "@/components/HeaderBar";
 import FooterBar from "@/components/FooterBar";
 import AuthProvider from "@/contexts/auth";
+import { ToastContainer } from "react-toastify"
+import 'react-toastify/dist/ReactToastify.css';
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -31,6 +33,7 @@ export default function RootLayout({
       <html lang="pt-BR">
         <body className={`${roboto.className} bg-red-700`}>
           <AuthProvider>
+            <ToastContainer autoClose={3000}/>
             <div className="min-h-screen flex flex-col">
               <HeaderBar />
                   <main className="flex-grow">{children}</main>

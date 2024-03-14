@@ -13,6 +13,7 @@ const CardProducts: React.FC<BurguerCardProps> = ({
   title,
   price,
 }) => {
+
   return (
     <div className="max-w-[800px] mx-auto bg-zinc-700 flex shadow-xl rounded-l-3xl rounded-r-[10px] transition duration-300">
       <div className="md:w-1/2 w-[60%]">

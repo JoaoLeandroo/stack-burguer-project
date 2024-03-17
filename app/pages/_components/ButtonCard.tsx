@@ -4,16 +4,20 @@ import "react-toastify/dist/ReactToastify.css";
 import { useContext } from "react";
 import { AuthContext } from "@/contexts/auth";
 
-const ButtonCard = ({ children }: { children: React.ReactNode }) => {
-  const { count, setCount, pedidos, setPedidos } = useContext(AuthContext);
+interface ButtonCardProps {
+  children: React.ReactNode;
+  itemsClient: any;
+}
+
+const ButtonCard: React.FC<ButtonCardProps> = ({ children, itemsClient }) => {
+  const { count, setCount, itemsAdd, setItemsAdd } = useContext(AuthContext);
 
   const addCart = () => {
-    const items = [];
-    items.push(...pedidos, "ola mundo");
-    setPedidos(items);
     setCount(count + 1);
     toast.success("Adicionado ao carrinho!");
-    setCount("namePedido");
+    const arr = []
+    arr.push(...itemsAdd, itemsClient)
+    setItemsAdd(arr)
   };
 
   return (

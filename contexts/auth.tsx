@@ -5,14 +5,14 @@ export const AuthContext = createContext<any>({});
 
 const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [count, setCount] = useState(0);
-  const [pedidos, setPedidos] = useState<object>(["pedidos...", "teste2"]);
+  const [itemsAdd, setItemsAdd] = useState([])
 
   useEffect(() => {
-    console.log(pedidos)
-  }, [pedidos])
+    console.log(itemsAdd)
+  }, [itemsAdd])
 
   return (
-    <AuthContext.Provider value={{ count, setCount, pedidos, setPedidos }}>
+    <AuthContext.Provider value={{ count, setCount, itemsAdd, setItemsAdd }}>
       {children}
     </AuthContext.Provider>
   );

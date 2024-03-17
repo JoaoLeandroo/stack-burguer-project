@@ -14,7 +14,6 @@ const CardProducts: React.FC<BurguerCardProps> = ({
   title,
   price,
 }) => {
-
   return (
     <div className="max-w-[800px] mx-auto bg-zinc-700 flex shadow-xl rounded-l-3xl rounded-r-[10px] transition duration-300">
       <div className="md:w-1/2 w-[60%]">
@@ -38,7 +37,7 @@ const CardProducts: React.FC<BurguerCardProps> = ({
           </p>
 
           <div className="w-full">
-            <ButtonCard>
+            <ButtonCard itemsClient={{ product: title, valueProduct: price }}>
               <div className="md:h-11 h-8 bg-green-500 w-full hover:bg-green-600 p-1 md:p-3 flex items-center justify-center gap-2 rounded-full md:rounded-[5px] font-semibold">
                 <FaPlusCircle size={20} />
                 <span className="hidden md:block">Adicionar ao Carrinho</span>

@@ -1,7 +1,7 @@
 "use client";
 import Container from "@/components/Container";
 import { RiDeleteBin5Line } from "react-icons/ri";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { AuthContext } from "@/contexts/auth";
 import ButtonRemoveItem from "../_components/ButtonRemoveItem";
 

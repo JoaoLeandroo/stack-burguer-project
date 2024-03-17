@@ -48,7 +48,7 @@ const Banner = () => {
               />
             </div>
             <div className="mt-2">
-              <ButtonCard>
+              <ButtonCard itemsClient={{ product: "Stack Combo", valueProduct: 55.90 }}>
                 <div className="md:h-11 h-8 bg-green-500 w-full hover:bg-green-600 p-1 md:p-3 flex items-center justify-center gap-2 rounded-full md:rounded-[5px] font-semibold">
                   <FaPlusCircle size={20} />
                   <span className="hidden md:block">Adicionar ao Carrinho</span>

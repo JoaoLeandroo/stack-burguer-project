@@ -9,8 +9,8 @@ const NotFound = () => {
           href={"/"}
           className="flex items center text-2xl md:text-3xl text-center flex-col md:flex-row justify-center"
         >
-          <span className="text-blue-600 font-bold hover:text-blue-800">
-            Página não encontrada Retorne a página inícial.
+          <span className="text-white font-bold hover:text-slate-300">
+            Página não encontrada. Retorne à página inicial.
           </span>
         </Link>
       </div>

@@ -33,7 +33,7 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className={`${roboto.className} bg-red-700`}>
         <AuthProvider>
-          <ToastContainer autoClose={1000} />
+          <ToastContainer autoClose={300} />
           <div className="min-h-screen flex flex-col">
             <HeaderBar />
             <main className="flex-grow">{children}</main>

@@ -10,10 +10,9 @@ interface ButtonCardProps {
 }
 
 const ButtonCard: React.FC<ButtonCardProps> = ({ children, itemsClient }) => {
-  const { count, setCount, itemsAdd, setItemsAdd } = useContext(AuthContext);
+  const { itemsAdd, setItemsAdd } = useContext(AuthContext);
 
   const addCart = () => {
-    setCount(count + 1);
     toast.success("Adicionado ao carrinho!");
     const arr = []
     arr.push(...itemsAdd, itemsClient)

@@ -8,7 +8,7 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [itemsAdd, setItemsAdd] = useState([])
 
   useEffect(() => {
-    console.log(itemsAdd)
+    setCount(itemsAdd.length)
   }, [itemsAdd])
 
   return (

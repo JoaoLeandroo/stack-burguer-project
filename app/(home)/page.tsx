@@ -1,6 +1,6 @@
 import Container from "@/components/Container";
 import SectionsOptionsContainer from "@/components/SectionsOptionsContainer";
-import Banner from "@/components/Banner";
+import Banner from "@/components/banner";
 
 export default function Home() {
   return (

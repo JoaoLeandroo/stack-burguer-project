@@ -4,6 +4,7 @@ import { RiDeleteBin5Line } from "react-icons/ri";
 import { useContext } from "react";
 import { AuthContext } from "@/contexts/auth";
 import ButtonRemoveItem from "../_components/ButtonRemoveItem";
+import CalculadoValueProducts from "../_components/CalculadoValueProducts";
 
 const Cart = () => {
   const { itemsAdd } = useContext(AuthContext);
@@ -32,6 +33,7 @@ const Cart = () => {
             </div>
           );
         })}
+      <CalculadoValueProducts />
       </div>
     </Container>
   );

@@ -1,53 +1,102 @@
+import React, { useMemo } from "react";
 import ButtonCard from "./ButtonCard";
 import { FaPlusCircle } from "react-icons/fa";
 
-interface BurguerCardProps {
+interface CardProductsProps {
   src: string;
   alt: string;
   title: string;
   price: number | string;
 }
 
-const CardProducts: React.FC<BurguerCardProps> = ({
-  src,
-  alt,
-  title,
-  price,
-}) => {
+const formatBRL = (value: number | string) => {
+  if (typeof value === "number") {
+    return new Intl.NumberFormat("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+      minimumFractionDigits: 2,
+    }).format(value);
+  }
+  // Evita "R$ R$"
+  const v = String(value).trim();
+  return v.startsWith("R$") ? v : `R$ ${v}`;
+};
+
+const CardProducts: React.FC<CardProductsProps> = ({ src, alt, title, price }) => {
+  const priceLabel = useMemo(() => formatBRL(price), [price]);
+
   return (
-    <div className="max-w-[800px] mx-auto bg-zinc-700 flex shadow-xl rounded-l-3xl rounded-r-[10px] transition duration-300">
-      <div className="md:w-1/2 w-[60%]">
+    <article
+      className="
+        group w-full overflow-hidden rounded-2xl
+        bg-white/80 dark:bg-zinc-800/80
+        shadow-sm ring-1 ring-zinc-200/70 dark:ring-zinc-700/60
+        transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5
+      "
+      aria-label={title}
+    >
+      {/* Imagem */}
+      <div className="relative">
         <img
-          className="w-full rounded-l-3xl"
           src={src}
           alt={alt}
           title={title}
+          className="
+            w-full h-auto object-cover
+            aspect-[4/3] sm:aspect-[16/9]
+            transition-transform duration-300 group-hover:scale-[1.02]
+          "
+          loading="lazy"
         />
+        {/* Badge de preço */}
+        <span
+          className="
+            absolute top-3 right-3
+            rounded-full px-3 py-1 text-sm font-semibold
+            bg-green-500 text-white shadow-md
+          "
+          aria-hidden="true"
+        >
+          {priceLabel}
+        </span>
       </div>
-      <div className="md:w-1/2 w-[40%]">
-        <div className="px-6 py-0 md:py-2 flex items-center justify-center font-bold md:text-3xl text-lg bg-green-500 rounded-tr-[10px] w-full">
-          <h2 className="uppercase drop-shadow-xl">{title}</h2>
-        </div>
-        <div className="w-full px-6">
-          <p className="font-bold text-xl py-4 md:py-11">
-            R$
-            <span className="text-3xl md:text-7xl underline underline-offset-4 text-yellow-400">
-              {price}
-            </span>
-          </p>
 
-          <div className="w-full">
-            <ButtonCard itemsClient={{ product: title, valueProduct: price }}>
-              <div className="md:h-11 h-8 bg-green-500 w-full hover:bg-green-600 p-1 md:p-3 flex items-center justify-center gap-2 rounded-full md:rounded-[5px] font-semibold">
-                <FaPlusCircle size={20} />
-                <span className="hidden md:block">Adicionar ao Carrinho</span>
-                <span className="block md:hidden">Add</span>
-              </div>
-            </ButtonCard>
-          </div>
+      {/* Conteúdo */}
+      <div className="p-4 sm:p-5">
+        <h3
+          className="
+            text-base sm:text-lg font-semibold
+            text-zinc-900 dark:text-zinc-100
+            line-clamp-2
+          "
+          title={title}
+        >
+          {title}
+        </h3>
+
+        <div className="mt-4">
+          <ButtonCard itemsClient={{ product: title, valueProduct: price }}>
+            <div
+              className="
+                w-full inline-flex items-center justify-center gap-2
+                rounded-full sm:rounded-lg
+                px-4 py-2.5 sm:py-3
+                font-medium
+                bg-green-600 text-white
+                hover:bg-green-700 active:bg-green-800
+                transition-colors duration-200
+                focus:outline-none focus-visible:ring-2 focus-visible:ring-green-400
+              "
+              aria-label={`Adicionar ${title} ao carrinho por ${priceLabel}`}
+            >
+              <FaPlusCircle className="text-white" size={18} />
+              <span className="hidden sm:inline">Adicionar ao Carrinho</span>
+              <span className="sm:hidden">Adicionar</span>
+            </div>
+          </ButtonCard>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 
